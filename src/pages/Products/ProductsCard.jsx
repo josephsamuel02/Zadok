@@ -158,7 +158,26 @@ const ProductsCard = () => {
   //     company: " FOTON",
   //   },
   // ];
-
+  const Examples = [
+    {
+      image: ["/image/house 1.jpg", "/image/house3.jpg"],
+      name: "Property Name",
+      about_product:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      image: ["/image/house 2.jpg", "/image/house 1.jpg"],
+      name: "Property Name",
+      about_product:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      image: ["/image/house3.jpg", "/image/house 2.jpg"],
+      name: "Property Name",
+      about_product:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+  ];
   return (
     <>
       <h3 className="mb-12 mx-auto text-3xl md:text-5xl text-gray-1000   text-center">
@@ -166,8 +185,8 @@ const ProductsCard = () => {
       </h3>
       <hr className="mx-8 md:mx-12 bg-[#de1102] h-1" />
       <div className="mx-auto px-6 w-full h-auto bg-white grid gap-3 grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {data &&
-          data.map((i, n) => (
+        {Examples &&
+          Examples.map((i, n) => (
             <Card
               className="mx-auto mt-16 max-w-[23rem] md:max-w-[23rem] lg:max-w-[26rem] overflow-hidden rounded-md"
               key={n}
@@ -178,7 +197,11 @@ const ProductsCard = () => {
                 color="transparent"
                 className="m-0 rounded-none"
               >
-                <img src={i.image[0]} alt="ui/ux review check" className="h-52" />
+                <img
+                  src={i.image[0]}
+                  alt="ui/ux review check"
+                  className="mx-auto h-52 w-11/12 rounded-md"
+                />
               </CardHeader>
               <CardBody>
                 <Typography variant="h4" color="blue-gray">
