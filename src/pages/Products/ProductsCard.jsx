@@ -16,14 +16,16 @@ const ProductsCard = () => {
   const [showDetailCard, setShowDetailCard] = useState(false);
   const [productData, setProductData] = useState();
 
-  const [data, setData] = useState();
+  // const [data, setData] = useState();
 
   const getData = async () => {
     await getDocs(collection(db, "products"))
       .then((querySnapshot) => {
-        const newData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+        // const newData =
 
-        setData(newData);
+        querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+
+        // setData(newData);
       })
       .catch((error) => {
         console.log("Error getting documents: ", error);
