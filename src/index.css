@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:wght@300&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Racing+Sans+One&display=swap");
+@import "react-toastify/dist/ReactToastify.min.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
